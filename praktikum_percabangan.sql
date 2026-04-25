@@ -1,3 +1,21 @@
+CREATE DATABASE IF NOT EXISTS db_percabangan;
+USE db_percabangan;
+
+DROP TABLE IF EXISTS produk;
+
+CREATE TABLE produk (
+    id_produk INT AUTO_INCREMENT PRIMARY KEY,
+    nama_produk VARCHAR(100),
+    stok INT
+);
+
+INSERT INTO produk (nama_produk, stok) VALUES
+('Pensil', 3),
+('Buku', 10),
+('Penghapus', 0),
+('Pulpen', 25),
+('Spidol', 5);
+
 DROP PROCEDURE IF EXISTS cek_status_stok;
 DELIMITER $$
 
